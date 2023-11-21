@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+h5 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+code {
+    background-color: #eee;
+    border-radius: 10px;
+    display: block;
+    padding: 20px;
+    color: blueviolet;
+}
+
+section {
+    padding: 20px;
+}
+
+.flex {
+    display: flex;
+}
+
+.main-transformation-container-divided {
+    align-items: center;
+}
+
+.main-transformation-container-divided div {
+    width: 50%;
+    font-size: 1.3rem;
+    color: whitesmoke;
+}
+
+.main-transformation-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(17, 17, 17);
+    color: white;
+    font-size: 1.2rem;
+}
+
+.main-transformation-container h3, h4 {
+    color: white;
+    text-align: center;
+}
+
+.astronaut-img {
+    border-radius: 2rem;
+    width: 20rem;
+    height: 20rem;
+    margin: 0 auto;
+    transform: rotate(20deg);
+}
+
+.timing-image {
+    width: 20rem;
+    margin: 0 auto;
+}

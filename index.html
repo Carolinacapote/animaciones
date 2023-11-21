@@ -1,29 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Animaciones con CSS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Animaciones con CSS</title>
 </head>
+
 <body>
-    <h1>Animaciones</h1>
-    <section>
-      <h3>aqui va la introducción</h3>
-    </section>
+  <h1>Animaciones</h1>
+  <section>
+    <h3>aqui va la introducción</h3>
+  </section>
 
-    <section>
-      <h3>aqui transformaciones</h3>
-    </section>
+  <section class="main-transformation-container">
+    <h3>Transformaciones</h3>
+    <div class="flex main-transformation-container-divided">
+      <div>
+        <p>
+          Las transformaciones son una de las características de CSS más interesantes la cual permite realizar efectos
+          visuales 2D y 3D. Con
+          ellas podemos hacer cosas como mover elementos, rotarlos, aumentarlos o disminuirlos y otras transformaciones
+          relacionadas o combinadas.
+          <br>
+        </p>
+        <pre>
+          <code>
+            .astronaut-img {
+              border-radius: 2rem;
+              width: 20rem;
+              height: 20rem;
+              margin: 0 auto;
+              transform: rotate(20deg);
+            }
+          </code>
+        </pre>
+      </div>
+      <img class="astronaut-img" src="https://i.pinimg.com/550x/12/5b/47/125b4749900b13cbacf81faade2a5f8f.jpg"
+        alt="imagen astronauta">
+    </div>
+    <h4>Tipos de transformaciones</h4>
+    <div class="flex main-transformation-container-divided">
+      <div>
+        <h5>Timing functions: </h5>
+        <p>La función de tiempo de animación especifica la curva de velocidad de una animación. La curva de velocidad
+          define el TIEMPO que usa una animación para cambiar de un conjunto de estilos CSS a otro</p>
+      </div>
+      <img class="timing-image" src="https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function/ease.svg" alt="">
+    </div>
+    <h5>transform: </h5>
+    <p>Es una propiedad que permite aplicar funciones de transformación a un elemento HTML, como trasladar, rotar,
+      escalar o
+      inclinar, en dos o tres dimensiones</p>
+    <div class="flex main-transformation-container-divided">
+      <div>
+        <h5>transform-origin: </h5>
+        <p>Es una propiedad que permite aplicar funciones de transformación a un elemento HTML, como trasladar, rotar,
+          escalar o
+          inclinar, en dos o tres dimensiones</p>
+      </div>
+    </div>
+  </section>
 
-    <section>
-      <h3>aqui transiciones</h3>
-    </section>
+  <section>
+    <h3>aqui transiciones</h3>
+  </section>
 
-    <section>
-      <h3>aqui animaciones
-      </h3>
-    </section>
-    <script src="script.js"></script>
+  <section>
+    <h3>aqui animaciones
+    </h3>
+  </section>
+  <script src="script.js"></script>
 </body>
+
 </html>
