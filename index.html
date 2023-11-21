@@ -49,16 +49,92 @@
       </div>
       <img class="timing-image" src="https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function/ease.svg" alt="">
     </div>
-    <h5>transform: </h5>
-    <p>Es una propiedad que permite aplicar funciones de transformación a un elemento HTML, como trasladar, rotar,
-      escalar o
-      inclinar, en dos o tres dimensiones</p>
-    <div class="flex main-transformation-container-divided">
+    <div style="margin-top: 20px; flex-direction: row-reverse;" class="flex main-transformation-container-divided">
       <div>
-        <h5>transform-origin: </h5>
-        <p>Es una propiedad que permite aplicar funciones de transformación a un elemento HTML, como trasladar, rotar,
-          escalar o
-          inclinar, en dos o tres dimensiones</p>
+        <h5>Translate(): </h5>
+        <p>Translate permite mover un elemento en el eje X o Y, incluso en ambos, esto quiere decir que con CSS
+          podríamos llevar un elemento desde un punto A a un punto B</p>
+        <pre>
+          <code>
+            .translate-image:hover {
+              transform: translate(0px, -100%);
+              transition-duration: 2s;
+            }
+            .translate-image:not(:hover) {
+                transform: translate(0px, 0px);
+                transition-duration: 2s;
+            }
+          </code>
+        </pre>
+      </div>
+      <img class="translate-image" src="https://assets.stickpng.com/images/5856a4f24f6ae202fedf2760.png" alt="">
+    </div>
+    <div style="margin-top: 20px; flex-direction: row-reverse;" class="flex main-transformation-container-divided">
+      <div>
+        <h5>Rotate, Scale, Skew y Matrix(): </h5>
+        <p>Rotate: Ayuda a girar un elemento.</p>
+        <p>Scale: Se pude agrandar o achicar un elemento.</p>
+        <p>Skew: Nos ayuda a deformar un elemento tanto en eje X como en Y.</p>
+        <p>Matrix: Esta propiedad es un poco más compleja, nos ayuda a rotar, escalar, deformar, esto se hace através de
+          coordenadas.</p>
+        <img style="width: 70%; border-radius: 20px; margin-top: 10px;"
+          src="https://media.giphy.com/media/KRRSOKFINjskbRNENr/giphy.gif" alt="">
+      </div>
+      <div>
+        <img class="scale-image"
+          src="https://png.pngtree.com/png-clipart/20230507/ourmid/pngtree-cat-with-sunglasses-on-isolated-background-png-image_7088102.png"
+          alt="">
+        <pre style="width: fit-content;">
+          <code>
+            .scale-image {
+              transition: transform 1s ease-in-out;
+            }
+            .scale-image:hover {
+                transform: scale(0.5);
+            }
+          </code>
+        </pre>
+      </div>
+    </div>
+    <div style="margin-top: 20px;" class="flex main-transformation-container-divided">
+      <div>
+        <h5>Transform origin: </h5>
+        <p>Siempre utilizamos transform, el origen de esta transformación va ser en todo el centro, lo que indica que en
+          caso que queremos rotar un elemento, rotará desde su punto de origen central, con css podemos cambiar ese
+          punto de origen con transform origin.</p>
+        <pre style="width: fit-content;">
+          <code>
+            .transform-origin {
+              margin: 0 auto;
+              width: 30%;
+              transition: transform 2s ease-in-out;
+              transform-origin: left bottom;
+            }          
+            .transform-origin:hover {
+                transform: rotate(360deg);
+            }
+          </code>
+        </pre>
+      </div>
+      <div class="flex">
+        <img class="transform-origin" src="./assets/bat.webp" alt="">
+      </div>
+    </div>
+    <div style="margin-top: 20px;" class="flex main-transformation-container-divided">
+      <div>
+        <h5>Transform de estilo y perspectiva: </h5>
+        <p>En css también podemos hacer transformaciones en 3D, esto significa que podemos ajustar la perspectiva y el
+          estilo de un componente. Este tipo de transformación lo que implica es que ya no tendremos un plano donde
+          manejaremos un eje X y uno Y sino también un eje Z, que es la profundidad del elemento.</p>        
+        <img src="https://lenguajecss.com/css/transformaciones/transform-3d/transform-axis-x-y-z.png" alt="">
+      </div>
+      <div class="flex" style="height: 100%; flex-direction: column; gap: 100px; align-items: center;">
+        <div class="container">
+          <div class="box">
+              <p>¡Transformación 3D!</p>
+          </div>
+        </div>
+        <img style="margin-top: 50px;" src="./assets/perspectiva.png" alt="">
       </div>
     </div>
   </section>

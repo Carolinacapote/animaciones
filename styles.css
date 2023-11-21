@@ -77,3 +77,58 @@ section {
     width: 20rem;
     margin: 0 auto;
 }
+.translate-image {
+    width: 150px !important;
+    margin: 0 auto;
+    height: 150px !important;
+    border-radius: 50%;
+}
+.translate-image:hover {
+    transform: translate(0px, -100%);
+    transition-duration: 2s;
+}
+.translate-image:not(:hover) {
+    transform: translate(0px, 0px);
+    transition-duration: 2s;
+}
+
+.scale-image {
+    transition: transform 1s ease-in-out;
+    margin: 0 auto;
+}
+
+.scale-image:hover {
+    transform: scale(0.5);
+}
+
+.transform-origin {
+    margin: 0 auto;
+    width: 30%;
+    transition: transform 2s ease-in-out;
+    transform-origin: left bottom;
+}
+
+.transform-origin:hover {
+    transform: rotate(360deg);
+}
+
+.container {
+    perspective: 800px;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    line-height: 200px;
+    font-size: 1.5em;
+    transform-style: preserve-3d;
+    transform: rotateX(45deg) rotateY(45deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.box:hover {
+    transform: rotateX(0deg) rotateY(0deg);
+}
