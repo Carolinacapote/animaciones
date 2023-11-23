@@ -302,6 +302,7 @@ animation: change-color2 3s linear infinite;
 .circle2 {
     background-color: red;
     transition: background-color 1s ease, transform 1s;
+    transition-delay: 0.5s;
 }
 .circle3 {
     background-color: gray;
