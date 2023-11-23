@@ -98,6 +98,11 @@ section {
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
     color: black;
     width: 700px;
+    cursor: pointer;
+  }
+  .s-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
 
   .pink {
