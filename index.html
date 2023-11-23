@@ -13,12 +13,18 @@
 <body>
   <div id="fullpage">
     <!-- Introducción -->
-    <div class="section">
-      <h1>Animaciones</h1>
-      <section>
-        <h3>aqui va la introducción</h3>
-      </section>
+    <div class="section title-container">
+      <h1>TRANSFORMACIONES, TRANSICIONES<br />
+        Y ANIMACIONES</h1>
     </div>
+
+    <section class="section main-transformation-container">
+      <h3 onclick="toggleCards()" style="cursor: pointer;">¿Por qué usarlas?</h3>
+        <div class="s-card pink">Mejoran la usabilidad de nuestros sitios web.</div>
+        <div class="s-card aqua">Tienen beneficios para el cerebro.</div>
+        <div class="s-card yellow">Comunican.</div>
+        <div class="s-card purple">Llaman la atención.</div>
+    </section>
 
     <!-- Transformaciones -->
     <section class="section main-transformation-container">
@@ -208,12 +214,340 @@
     </section>
 
     <!-- Animaciones -->
-    <div class="section">
-      <section>
-        <h3>aqui animaciones
-        </h3>
-      </section>
-    </div>
+    <section class="section main-transformation-container">
+      <h3>Animaciones</h3>
+      <div class="animaciones">
+        <div>
+          <p>
+            Las animaciones CSS, al igual que las transiciones, crean movimientos y cambios
+            graduales en los elementos de nuestra página.
+          </p>
+          <br/> 
+          <p>La principal diferencia es, que una animación CSS tiene estados o frames
+            (tantos como queramos) y por ello, son más complejas que las transiciones.
+          </p>
+        </div>
+        <div class="animated-cube">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section main-transformation-container">
+      <h4>Propiedades de una animación</h4>
+        <table id="animation-table">
+          <tr>
+            <th>Propiedad</th>
+            <th>¿Para qué sirve?</th>
+            <th></th>
+          </tr>
+          <tr>
+            <td>animation-name</td>
+            <td>Nombre con el cual identificamos la animación</td>
+            <td>Obligatoria</td>
+          </tr>
+          <tr>
+            <td>animation-duration</td>
+            <td>Tiempo que tardará en completarse toda la animación</td>
+            <td>Obligatoria</td>
+          </tr>
+          <tr>
+            <td>animation-iteration-count</td>
+            <td>Número de veces que se repite</td>
+            <td>Opcional</td>
+          </tr>
+          <tr>
+            <td>animation-timing-function</td>
+            <td>Define el progresoa lo largo de la duración de la animación.
+              Define la curva de velocidad</td>
+            <td>Opcional</td>
+          </tr>
+          <tr>
+            <td>animation-delay</td>
+            <td>Tiempo de espera para que se ejecute la animación</td>
+            <td>Opcional</td>
+          </tr>
+          <tr>
+            <td>animation-direction</td>
+            <td>Especifica cómo debe reproducirse la animación
+              (dirección normal, en reversa o en ciclos alternos)</td>
+            <td>Opcional</td>
+          </tr>
+          <tr>
+            <td>animation-fill-mode</td>
+            <td>Setea el estilo que tendrá el elemento animado cuando la animación no
+              se está ejecutando
+            </td>
+            <td>Opcional</td>
+          </tr>
+          <tr>
+            <td>animation-play-state</td>
+            <td>Pausa o inicia la animación</td>
+            <td>Opcional</td>
+          </tr>
+          <tr>
+            <td>animation</td>
+            <td>Forma corta de escribir todas las propiedades de la animación en una sola</td>
+            <td></td>
+          </tr>
+        </table>
+    </section>
+
+    <section class="section main-transformation-container">
+      <h3>@keyframes</h3>
+      <p>Regla donde se define la animación, que propiedad(es) del elemento
+        se van a cambiar y en que momento.
+      </p>
+      <div class="keyframes-code">
+        <div>
+          <h5>from - to</h5>
+          <br/>
+          <code>
+            @keyframes <span style="color: crimson;">change-color2</span> {<br/>
+              from { background: red; }  /* Primer fotograma */<br/>
+              to { background: yellow; }  /* Último fotograma */<br/>
+            }<br/>
+            /* Clase a animar */<br/>
+            .animated-2 {<br/>
+              width: 40vh;<br/>
+              height: 40vh;<br/>
+              border-radius: 50%;<br/>
+              animation: change-color2 3s linear infinite;<br/>
+            }<br/>
+          </code>
+        </div>
+        <div style="display: flex; justify-content: center;">
+          <div class="animated-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section main-transformation-container">
+      <div class="keyframes-code">
+        <div>
+          <h5>Porcentajes</h5>
+          <br/>
+          <code>
+            @keyframes <span style="color: crimson;">change-color1</span> {<br/>
+              0% {<br/>
+                background: red;         /* Primer fotograma */<br/>
+              }<br/>
+              50% {<br/>
+                background: yellow;      /* Segundo fotograma */<br/>
+                width: 100%;<br/>
+              }<br/>
+              100% {<br/>
+                background: green;       /* Último fotograma */<br/>
+              }<br/>
+            }
+            <br/>
+            /* Clase a animar */<br/>
+            .animated-1 {<br/>
+              background: grey;<br/>
+              color: #FFF;<br/>
+              width: 150px;<br/>
+              height: 150px;<br/>
+              animation: change-color1 3s ease infinite;<br/>
+            }<br/>
+          </code>
+        </div>
+        <div class="animated-1"></div>
+      </div>
+    </section>
+
+    <section class="section main-transformation-container">
+      <div class="keyframes-code">
+        <div class="phone">
+          <div class="lawn__container">
+          <div class="lawn lawn__one"></div>
+          <div class="lawn lawn__two"></div>
+          <div class="lawn lawn__three"></div>
+        </div>
+            <!-- Fruit 1 -->
+            <div class="layers layer-1 fruit">
+                <input type="checkbox">
+                <div class="container__carrot">
+                    <div class="carrot">
+                        <div class="eye-left">
+                          <div class="iris-medium"></div>
+                          <div class="iris-small"></div>
+                        </div>
+                        <div class="eye-right">
+                          <div class="iris-medium"></div>
+                          <div class="iris-small"></div> 
+                        </div>
+                        <div class="mouth__outer">
+                          <div class="mouth__inner"></div>
+                        </div>
+                    </div>
+                    <div class="sheets"></div>
+                    <div class="bow"></div>
+                    <div class="lines">
+                       <span class="l1"></span>
+                       <span class="l2"></span>  
+                       <span class="l3"></span>
+                       <span class="l4"></span>
+                       <span class="l5"></span>
+                    </div>
+                    <div class="heart"></div>
+                </div>
+    
+              </div>
+          
+             <!-- Fruit 2 -->
+            <div class="layers layer-2 fruit">
+              <input type="checkbox">
+                <div class="container__carrot">
+                    <div class="carrot">
+                        <div class="eye-left">
+                          <div class="iris-medium"></div>
+                          <div class="iris-small"></div>
+                        </div>
+                        <div class="eye-right">
+                          <div class="iris-medium"></div>
+                          <div class="iris-small"></div> 
+                        </div>
+                        <div class="mouth__outer">
+                          <div class="mouth__inner"></div>
+                        </div>
+                    </div>
+                    <div class="sheets"></div>
+                    <div class="bow"></div>
+                    <div class="lines">
+                       <span class="l1"></span>
+                       <span class="l2"></span>  
+                       <span class="l3"></span>
+                       <span class="l4"></span>
+                       <span class="l5"></span>
+                    </div>
+                    <div class="heart"></div> 
+                </div>
+    
+            </div>
+    
+            <!-- Wall 1 -->
+            <div class="layers layer-3 wall">
+                <div class="grass grass-one"></div>
+                <div class="grass grass-two"></div>
+            </div>
+    
+            <!-- Fruit 3-->
+            <div class="layers layer-4 fruit">
+               <input type="checkbox">           
+                <div class="container__carrot">
+                    <div class="carrot">
+                        <div class="eye-left">
+                          <div class="iris-medium"></div>
+                          <div class="iris-small"></div>
+                        </div>
+                        <div class="eye-right">
+                          <div class="iris-medium"></div>
+                          <div class="iris-small"></div> 
+                        </div>
+                        <div class="mouth__outer">
+                          <div class="mouth__inner"></div>
+                        </div>
+                    </div>
+                    <div class="sheets"></div>
+                    <div class="bow"></div>
+                    <div class="lines">
+                       <span class="l1"></span>
+                       <span class="l2"></span>  
+                       <span class="l3"></span>
+                       <span class="l4"></span>
+                       <span class="l5"></span>
+                    </div>
+                    <div class="heart"></div> 
+                </div>
+    
+            </div>
+    
+            <!-- Wall 2 -->
+            <div class="layers layer-5 wall">
+                <div class="grass grass-one"></div>
+                <div class="grass grass-two"></div>
+            </div>
+    
+            <!-- Fruit 4 -->
+            <div class="layers layer-6 fruit">
+                <input type="checkbox">            
+                <div class="container__carrot">
+                    <div class="carrot">
+                        <div class="eye-left">
+                          <div class="iris-medium"></div>
+                          <div class="iris-small"></div>
+                        </div>
+                        <div class="eye-right">
+                          <div class="iris-medium"></div>
+                          <div class="iris-small"></div> 
+                        </div>
+                        <div class="mouth__outer">
+                          <div class="mouth__inner"></div>
+                        </div>
+                    </div>
+                    <div class="sheets"></div>
+                    <div class="bow"></div>
+                    <div class="lines">
+                       <span class="l1"></span>
+                       <span class="l2"></span>  
+                       <span class="l3"></span>
+                       <span class="l4"></span>
+                       <span class="l5"></span>
+                    </div>
+                    <div class="heart"></div> 
+                </div>
+    
+            </div>
+  
+            <!-- Wall 3 -->
+            <div class="layers layer-7 wall">
+                <div class="grass grass-one"></div>
+                <div class="grass grass-two"></div>
+          </div>
+        </div>
+
+        <div>
+          <code>
+            .eye-left,.eye-right {<br/>
+                position:absolute;<br/>
+                width:25px;<br/>
+                height:25px;<br/>
+                border-radius:100%;<br/>
+                background:black;<br/>
+                animation: <span style="color: crimson;">blink</span> 2s alternate infinite;<br/>
+            }<br/>
+            @keyframes <span style="color: crimson;">blink</span> {<br/>
+                0%,25%{opacity:1}<br/>
+                35%{opacity: 0}<br/>
+                50%{opacity:1;}<br/>
+                100%{opacity:1} <br/>      
+            }<br/>
+          </code>
+          <br/>
+          <code>
+            .carrot-3 {<br/> 
+                z-index: 40;<br/> 
+                height: 345px;<br/> 
+                left: 30px;<br/> 
+                animation: <span style="color: crimson;">carrot-three</span> 4.5s linear alternate infinite;<br/> 
+            }<br/> 
+            @keyframes <span style="color: crimson;">carrot-three</span> {<br/> 
+                0% {transform: translateY(-80px);}<br/> 
+                25% {transform: translateY(80px);}<br/> 
+                50% {transform: translateY(-80px);}<br/> 
+                60% {transform: translateY(60px);}<br/> 
+                80% {transform: translateY(-80px);}<br/> 
+                100% {transform: translateY(0);}<br/> 
+            }
+          </code>
+        </div>
+      </div>
+    </section>
   </div>
   <script src="script.js"></script>
 </body>
